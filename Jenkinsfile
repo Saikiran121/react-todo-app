@@ -41,7 +41,7 @@ pipeline {
         stage('Start the application') {
             steps {
                 nodejs("NodeJS_16") {
-                sh 'npm start'
+                sh 'npm start &'
                 }
             }
         }
