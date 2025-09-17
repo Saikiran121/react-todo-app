@@ -37,6 +37,13 @@ pipeline {
                 }
             }
         }
+
+        stage('Start the application') {
+            steps {
+                nodejs("NodeJS_24") {
+                sh 'npm start'
+            }
+        }
     }
 }
 
