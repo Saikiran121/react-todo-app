@@ -29,6 +29,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Run Tests') {
+            steps {
+                nodejs('NodeJS_24') {
+                sh 'npm test'
+                }
+            }
+        }
     }
 }
 
