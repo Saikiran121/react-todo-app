@@ -42,6 +42,7 @@ pipeline {
             steps {
                 nodejs("NodeJS_24") {
                 sh 'npm start'
+                }
             }
         }
     }
