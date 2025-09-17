@@ -16,7 +16,7 @@ pipeline {
         
         stage('npm version') {
             steps {
-                nodejs('NodeJS_24') {
+                nodejs('NodeJS_16') {
                 sh 'npm -version'
                 }
             }
@@ -24,7 +24,7 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                nodejs('NodeJS_24') {
+                nodejs('NodeJS_16') {
                 sh 'npm install'
                 }
             }
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                nodejs('NodeJS_24') {
+                nodejs('NodeJS_16') {
                 sh 'npm test'
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
 
         stage('Start the application') {
             steps {
-                nodejs("NodeJS_24") {
+                nodejs("NodeJS_16") {
                 sh 'npm start'
                 }
             }
